@@ -1,0 +1,2 @@
+# AVI_ngd_check
+CHECK NGDATE LOSS
