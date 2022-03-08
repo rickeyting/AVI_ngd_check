@@ -18,7 +18,6 @@ if not os.path.exists(device_path):
 
 def checking():
     check_vispers = device_df.dir.tolist()
-    print(check_vispers)
     loss_list =[]
     for v in check_vispers:
         date_list = os.listdir(v)
