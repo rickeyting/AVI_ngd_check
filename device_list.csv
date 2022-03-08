@@ -1,0 +1,4 @@
+device,dir
+V3,\\192.168.0.3\Ngdata-A
+V4,\\192.168.0.5\ngdata
+V5,\\192.168.0.7\ngdata

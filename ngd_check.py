@@ -10,12 +10,15 @@ import os
 import pandas as pd
 import numpy as np
 
-V3_path = r'\\192.168.0.3\Ngdata-A'
-V4_path = r'\\192.168.0.5\ngdata'
-V5_path = r'\\192.168.0.7\ngdata'
+device_path = os.path.join('.','device_list.csv')
+if not os.path.exists(device_path):
+    default_data = [['V3',r'\\192.168.0.3\Ngdata-A'],['V4',r'\\192.168.0.5\ngdata'],['V5',r'\\192.168.0.7\ngdata']]
+    device_df = pd.DataFrame(default_data,columns = ['device','dir'])
+    device_df.to_csv(device_path,index = False)
 
 def checking():
-    check_vispers = [V3_path,V4_path,V5_path]
+    check_vispers = device_df.dir.tolist()
+    print(check_vispers)
     loss_list =[]
     for v in check_vispers:
         date_list = os.listdir(v)
